@@ -158,8 +158,6 @@ body {
 /* product button end */
 
 
-/* productFormOpener end */
-
 #productContainer {
     margin: 20px auto;
     padding: 20px;
@@ -231,6 +229,81 @@ body {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
+    font-size: 60px;
+}
+
+#productSection #products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: space-between;
+    max-width: 100%;
 }
 
 
+
+
+/* styles for the elements created by javascript starts  */
+
+.products {
+    background-color: #fff;
+    padding: 15px;
+    margin: 30px 37px;
+    width: 300px;
+    max-width: 300px;
+    height: 160px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.products h3 {
+    margin: 0 0 10px;
+    font-size: 35px;
+    font-family:  Tahoma, Geneva, Verdana, sans-serif;
+    color: #000000;
+    text-align: center;
+    font-weight: lighter;
+    /* background-color:rgb(255, 255, 255) */
+    /* text-decoration: underline; */
+    
+}
+.products .price{
+    margin: 0 0 10px;
+    font-size: 23px;
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #000000;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.products p {
+    margin: 5px 0;
+    text-align: center;
+    font-size: 23px;
+    color: #555;
+}
+
+.deleteButton {
+    color: white;
+    background-color: #333;
+    /* margin: 25%; */
+    width: 30%;
+    height: 30px;
+    font-size: 13px;
+    /* text-align:center; */
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.editButton {
+    color: white;
+    background-color: #333;
+    margin-left: 20%;
+    width: 30%;
+    height: 30px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* styles for the elements created by javascript ends  */
