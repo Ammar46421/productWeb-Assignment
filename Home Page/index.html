@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav id="navbar">
+      <div id="titleBar">
+        <h2 id="title">WebBuy</h2>
+      </div>
+      <div id="menuBar">
+        <ul id="menuList">
+          <li><a href="./../product page/addPro.html">Products</a></li>
+          <li><a href="#">Account</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Product Button Start -->
+    <div id="description">
+      <h2>Welcome to WebBuy</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+        posuere nunc. Sed finibus, nunc ac convallis consectetur, mauris neque
+        fermentum neque, ac consectetur libero nisi vel neque. Nullam at ligula
+        at justo varius euismod. Pellentesque habitant morbi tristique senectus
+        et netus et malesuada fames ac turpis egestas.
+      </p>
+    </div>
+    <div id="productFormOpener">
+      <button type="button" onclick="addProduct()" id="productButton">
+        Add Product
+      </button>
+    </div>
+
+
+    <!-- Product Button End -->
+
+    <!-- product form Start-->
+    <div id="productContainer" style="display: none">
+      <form action="" id="productForm">
+        <h2
+          class="addProduct"
+          style="text-align: center; font-size: 50px; margin-bottom: 20px"
+        >
+          Add Product
+        </h2>
+        <div class="formGroup">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            id="addPrice"
+            placeholder="Add Price...."
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <label for="title">Add Title</label>
+          <input
+            type="text"
+            id="addTitle"
+            placeholder="Add Title...."
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <label for="content">Description</label>
+          <textarea
+            id="addDescription"
+            name="content"
+            rows="5"
+            placeholder="Add Description."
+            minlength="15"
+            maxlength="100"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="button" id="submitButton" onclick="submitBlog()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div id="productFormCloser" style="display: none;">
+      <button type="button" onclick="homePage()" id="homeButton">
+        Home Page
+      </button>
+    </div>
+    <!-- Product form End -->
+    <!-- product End -->
+
+    <!--product Section -->
+    <section id="productSection">
+      <h2 id="recentProducts" style="display: none">Products</h2>
+      <div id="products"></div>
+    </section>
+    <!-- product section end -->
     <script src="app.js"></script>
-</body>
+    <script src="./../product page/addPro.js"></script>
+  </body>
 </html>
