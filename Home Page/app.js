@@ -32,8 +32,8 @@ function submitBlog() {
     <h3>${title}</h3>
     <p>${description}</p>
     <h3 class="price">${"$"+price}</h3>
-    <button class="editButton" onclick="editBlog(this)">Edit</button>
-    <button class="deleteButton" onclick="deleteBlog(this)">Delete</button>`;
+    <button class="editButton" onclick="editProduct(this)">Edit</button>
+    <button class="deleteButton" onclick="deleteProduct(this)">Delete</button>`;
 
     document.getElementById("products").appendChild(products);
     
@@ -50,7 +50,7 @@ function submitBlog() {
 };
 
 
-function editBlog(button) {
+function editProduct(button) {
     let products = button.parentElement;
     let priceElement = products.querySelector('.price');
     let titleElement = products.querySelector('h3');
@@ -94,7 +94,7 @@ function saveBlog(button) {
     document.getElementById('addDescription').value = "";
 
     button.innerText = "Edit";
-    button.setAttribute('onclick', 'editBlog(this)');
+    button.setAttribute('onclick', 'editProduct(this)');
 
     document.getElementById('productButton').style.display = 'block';
     document.getElementById('description').style.display = 'block';
@@ -102,7 +102,7 @@ function saveBlog(button) {
     
 }
 
-function deleteBlog(button) {
+function deleteProduct(button) {
     if (confirm("Are you sure you want to delete this Product?")) {
         let products = button.parentElement;
         products.remove();
